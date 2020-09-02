@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <script>
+        //Funcion que trae resultados por Ajax
+        function get_results(){
+            //Traer valor seleccionado en Combo Box
+            option = document.getElementById('opciones')
+            var selected = option.options[option.selectedIndex].value;
+            //Traer valor de numero ingresado
+            numero = document.getElementById('number').value
+            
+            //Peticion a /number
+            $.getJSON('/number', {
+                //Valores para peticion GET
+                number: numero,
+                option: selected
+                //Funcion al retornar valores
+            }, function(data) {
+                ar_data = Array.from(data)
+                //Render de datos en Elemento del DOM
+                $("#resultados").text(
+                    data
+                    );
+            });
+        }
+    </script>
+    <!--Formulario para seleccionar y llenar valores a enviar por peticion-->
+    <div class="alert alert-primary" role="alert">
+        Ingresar Numero
+    </div>
+    <input type="number" id='number' class="form-control mx-sm-3">
+    <div class="alert alert-primary" role="alert">
+        Seleccionar Opcion
+    </div>
+    <div class="form-group">
+        <select class="custom-select" id="opciones" multiple >
+            <option selected value=1>Primos</option>
+            <option value="2">Pares Primos Gemelos</option>
+          </select>
+    </div>
+    <!--Boton para enviar peticion-->
+    <button type="button" onclick="get_results()" class="btn btn-outline-info">Enviar Resultados</button>
+    <!--Elemento para representar valores resultantes de peticion-->
+    <div id="resultados" class="alert alert-info">
+    </div>
+
+</body>
+</html>
