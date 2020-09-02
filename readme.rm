@@ -1,0 +1,32 @@
+Prueba para desarrollador Logyca
+
+Desarrollo de aplicacion web desarrollada con Python 
+Libreria usada Flask
+
+-Script principal de ejecucion
+-main.py
+
+carpeta con templates
+-inicio.html -> Home de sitio web para su renderizacion, contiene campos para seleccionar opciones de funciones para envio y numero que se va a pasar por estas opciones
+
+base de datos
+-number.sql
+
+Archivo txt de requerimientos para entono de desarrollo de Python
+-requirements.txt
+
+
+Aplicacion comprimida
+-app.zip
+
+
+Comando para instalacion de requerimientos
+pip install -r requirements.txt
+
+Script de ejecucion
+python main.py
+
+
+
+
+
