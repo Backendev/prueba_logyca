@@ -1,6 +1,6 @@
 Prueba para desarrollador Logyca
 
-Desarrollo de aplicacion web desarrollada con Python 
+<h1>Desarrollo de aplicacion web desarrollada con Python </h1>
 Libreria usada Flask
 
 -Script principal de ejecucion
@@ -25,6 +25,10 @@ pip install -r requirements.txt
 
 Script de ejecucion
 python main.py
+
+
+Enlace con entorno de desarrollo para Windows
+https://drive.google.com/file/d/19bPl7pA9ggnrECgbWAyvtFraVJJ28HnL/view?usp=sharing
 
 
 
