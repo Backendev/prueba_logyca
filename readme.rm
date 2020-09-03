@@ -9,7 +9,8 @@ Framework usado Flask
 carpeta con templates
 -inicio.html -> Home de sitio web para su renderizacion, contiene campos para seleccionar opciones de funciones para envio y numero que se va a pasar por estas opciones
 
-base de datos
+base de datos logyca
+creacion de tabla e insercion de datos
 -number.sql
 
 Archivo txt de requerimientos para entono de desarrollo de Python
